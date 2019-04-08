@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        
+        <title>KOCKAPOKER</title>
+    </head>
+<body>
+    <div class="container">
+        
+        <div class="roll_box">         
+            <div class="main_mix_roll_box">            
+                <div id="round" class="round"></div>
+                <div id="hidden" class="hidden"></div>
+
+                <img src="" class="dice dice_basic_position" id="dice0">
+                <img src="" class="dice dice_basic_position" id="dice1">
+                <img src="" class="dice dice_basic_position" id="dice2">
+                <img src="" class="dice dice_basic_position" id="dice3">
+                <img src="" class="dice dice_basic_position" id="dice4">
+
+                <img id="mixer" class="btn-roll" src="img/box.png"></img>
+            </div>
+      
+            <div class="select-box" id="select-box">  
+                <div class="slot" id="slot0"></div>
+                <div class="slot" id="slot1"></div>
+                <div class="slot" id="slot2"></div>
+                <div class="slot" id="slot3"></div>
+                <div class="slot" id="slot4"></div>
+            </div>    
+        </div>
+      
+        <div class="result_box"> 
+            <div id="scoresheet-menu">
+                    <div class="datagrid">
+                        <table>
+                            <tbody> 
+                                    <tr>
+                                        <td> <img src="img/small-dice-1.png"> </img></td >
+                                        <td id="0">-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                        <tr>
+                                        <td> <img src="img/small-dice-2.png"> </img></td >
+                                        <td id="1">-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td> <img src="img/small-dice-3.png"> </img></td >
+                                        <td id="2">-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td> <img src="img/small-dice-4.png"> </img></td >
+                                        <td id="3">-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td> <img src="img/small-dice-5.png"> </img></td >
+                                        <td id="4">-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td> <img src="img/small-dice-6.png"> </img></td >
+                                        <td id="5">-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr><td>BONUS</td ><td id="bonus-1">-</td><td>-</td><td>-</td><td>-</td></tr>
+                                </tbody>
+                            </table></div>
+
+                            <div class="datagrid">
+                                    <table>
+                                        <tbody> 
+                                            <tr>
+                                                <td> <img src="img/three-of-kind.png"> </img></td >
+                                                <td id="6">-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                            </tr>
+                                                <tr>
+                                                <td> <img src="img/poker.png"> </img></td >
+                                                <td id="7">-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <td> <img src="img/house.png"> </img></td >
+                                                <td id="8">-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <td> <img src="img/small-straight.png"> </img></td >
+                                                <td id="9">-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <td> <img src="img/big-straight.png"> </img></td >
+                                                <td id="10">-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <td> <img src="img/yatzee.png"> </img></td >
+                                                <td id="11">-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                    <td> <img src="img/snass.png"> </img></td >
+                                                    <td id="12">-</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                </tr>
+                                            <tr><td>BONUS</td ><td id="bonus-2">-</td><td>-</td><td>-</td><td>-</td></tr>
+                                        </tbody>
+                        </table>
+                    </div>  
+                </div> 
+            </div>
+        </div>
+
+        <script src="scripts.js"></script>
+        <script src="animation.js"></script>   
+    </body>
+</html>

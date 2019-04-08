@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+body { 
+    background-size: cover;
+    background-position: center;
+    font-family: Lato;
+    font-weight: 300;
+    position: relative;
+    height: 100vh;
+    background: rgba(38, 40, 42, 1);
+}
+.container { 
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 500px;
+  width: 1000px;
+  background: url('img/wood_background.png');
+  border-style: solid;
+  border-width:20px;
+  border-color:  rgba(21, 24, 28, 1);;
+}
+.result_box {
+  position: absolute;
+  margin: auto;
+  right: 0;
+  height: 460px;
+  width: 240px;
+  background: rgba(222, 199, 132, 1);
+}
+.select-box{
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  width: 360px;
+  height: 62px;
+  left: 70px;
+  top: 370px;
+}
+.roll_box {
+  position: absolute;
+  margin: auto;
+  left: 20px;
+  top:20px; 
+  height: 360px;
+  width: 520px;
+  background: rgba(222, 199, 132, 1);
+  -webkit-box-shadow: 3px 5px 17px 3px rgba(0,0,0,0.75);
+-moz-box-shadow: 3px 5px 17px 3px rgba(0,0,0,0.75);
+box-shadow: 3px 5px 17px 3px rgba(0,0,0,0.75); 
+}
+#mixer{
+  position:absolute;
+  display:block;
+  margin-top:10px;
+  margin-left: 10px;
+  z-index:3; 
+}
+#dice0, #dice1, #dice2, #dice3, #dice4 {
+  display:block;
+  position: absolute;
+  z-index:1; 
+  height:62px;
+}
+.dice_basic_position{
+
+  left: 80px;
+  top: 90px;
+}
+.dice-box{
+  width:330px;
+  height:50px;
+  background:red;
+}
+#inner-dice-box{
+ 
+  width:330px;
+  height:50px;
+  background:red;
+  opacity:0;
+}
+.slot{ 
+  display:block;
+ 
+  width:52px;
+  height:62px;
+  background: url('img/dice_hole.png');
+  background-size: cover;
+}
+.dice{
+  display:block;
+  width:52px;
+  height:62px;
+}
+.selected-dice{
+  display:flex;
+  justify-content: space-around ;
+  width:52px;
+  height:62px;
+  background: blue;  
+}
+#round{ 
+  position: absolute;
+  height:40px;
+  width:40px;
+  top:10px;
+  left:10px;
+  border-radius: 7px 7px 7px 7px;
+-moz-border-radius: 7px 7px 7px 7px;
+-webkit-border-radius: 7px 7px 7px 7px;
+border: 3px solid #836235;
+background-color:  rgba(199, 171, 105, 1);
+z-index:5;
+display: flex;
+  align-items: center;
+  justify-content: center
+}
+#hidden{
+  display:block;
+  position: absolute;
+  height:100px;
+  width:100px;
+  background: rgba(222, 199, 132, 1);
+  z-index:2;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+.round_p{
+  font: normal 10px Georgia, Times New Roman, Times, serif;
+  color: #5A5035; font-size: 10px;font-weight: bold;
+}
+.pick {
+  opacity: 0 !important;   
+}
+td img {
+  height:25px;
+  width:2x;
+
+}
+.table {      
+  border-collapse: collapse; 
+  text-align: left; 
+  width: 100%; } 
+  .datagrid { 
+    margin: 10px; 
+    font: normal 12px Georgia, Times New Roman, Times, serif; 
+    background: #fff; 
+    overflow: hidden; 
+    border-style:hidden;
+    border: 2px solid #5A5035; 
+    -webkit-border-radius: 9px; 
+    -moz-border-radius: 9px; 
+    border-radius: 9px; }
+  .datagrid table td, .datagrid table th { 
+    width: 40px; 
+    text-align:center; }
+  .datagrid table tbody td { 
+    color: #5A5035; 
+    border-left: 1px solid #E1EEF4;
+    font-size: 12px;
+    font-weight: bold; }
+    .datagrid table tbody td:first-child { 
+      border-left: none; }
+      .datagrid table tbody tr:last-child td { 
+        border-bottom: none; }
+
+#messageBox{
+    margin-top:10px;
+    display:flex;
+    justify-content: space-evenly ;
+    width:330px;
+    height:50px;
+    background:grey;   
+}
+.result {
+  background-color:  rgb(222, 199, 132);    
+}
+.resultx {
+  background-color: rgba(253, 0, 0, 0.596) !important; 
+}
+
+
+  .mixer_animation{
+    display:block;
+    position: relative;
+    -webkit-animation-name: example; 
+    -webkit-animation-duration: 4s; 
+    animation-name: example;
+    animation-duration: 1.2s;
+  }
+  
+  /* Standard syntax */
+  @keyframes example {
+    0%   { left:0px; top:0px;}
+    7%  {left:20px; top:0px;}
+    14%  { left:0px; top:0px;}
+  
+    21%  {left:20px; top:0px;}
+    28% { left:0px; top:0px;}
+  
+    35%  {left:20px; top:0px;}
+    42% { left:0px; top:0px;}
+  
+    49%  {left:20px; top:0px;}
+    56% { left:0px; top:0px;}
+  
+    63%  {left:20px; top:0px;}
+    70% { left:0px; top:0px;}
+  
+    77%  {left:20px; top:0px;}
+    84% { left:0px; top:0px;}
+  
+  
+    100% { left:0px; top:0px;}
+  }
+  
+  .mixer_rotate {
+    display:block;
+    position: relative;
+    -webkit-animation-name: rotate; 
+    -webkit-animation-duration: 4s; 
+    animation-name: rotate;
+    animation-duration: 0.5s;
+  }
+  
+  @keyframes rotate {
+    0%    { transform: rotate(0deg);}
+    25%   { transform: rotate(-20deg);}
+    85%   { transform: rotate(-20deg);}
+    100%  { transform: rotate(0deg);}
+  }
+  
+  
+  
+  .dice0_animation{
+    display:block;
+    position: relative;
+    -webkit-animation-name: dice0; 
+    -webkit-animation-duration: 4s; 
+    animation-name: dice0;
+    animation-duration: 0.5s;
+  }
+  .dice1_animation{
+    display:block;
+    position: relative;
+    -webkit-animation-name: dice1; 
+    -webkit-animation-duration: 4s; 
+    animation-name: dice1;
+    animation-duration: 0.5s;
+  }
+  .dice2_animation{
+    display:block;
+    position: relative;
+    -webkit-animation-name: dice2; 
+    -webkit-animation-duration: 4s; 
+    animation-name: dice2;
+    animation-duration: 0.5s;
+  }
+  .dice3_animation{
+    display:block;
+    position: relative;
+    -webkit-animation-name: dice0; 
+    -webkit-animation-duration: 4s; 
+    animation-name: dice3;
+    animation-duration: 0.5s;
+  }
+  .dice4_animation{
+    display:block;
+    position: relative;
+    -webkit-animation-name: dice4; 
+    -webkit-animation-duration: 4s; 
+    animation-name: dice4;
+    animation-duration: 0.5s;
+  }
+  /* Standard syntax */
+  
+  @keyframes dice0 {  /*pipa*/
+    0%   {  left: 80px; top: 90px;}
+    100% { left: 50px; top: 250px;} 
+  }
+  @keyframes dice1 {  /*pipa*/
+    0%   {  left: 80px; top: 90px;}
+    100% { left: 150px; top: 270px;}
+  }
+  @keyframes dice2 {  /*pipa*/
+    0%   {  left: 80px; top: 90px;}
+    100% { left: 240px; top: 280px;}
+  }
+  @keyframes dice3 {
+    0%   {  left: 80px; top: 90px;}
+    100% { left: 260px; top: 130px;}
+  }
+  @keyframes dice4 {
+    0%   {  left: 80px; top: 90px;}
+    100% { left: 320px; top: 210px;}
+  }
+  
+  .dice0_final_position{ left: 50px; top: 250px;} 
+  .dice1_final_position{ left: 150px; top: 270px;}  
+  .dice2_final_position{left: 240px; top: 280px; }  
+  .dice3_final_position{ left: 260px; top: 130px;}
+  .dice4_final_position{ left: 320px; top: 210px;}
+  
+  
+  /********************** ANIMÁCIÓ **********************/
+  .dice0_animation_back{
+    display:block;
+    position: relative;
+    -webkit-animation-name: dice0back; 
+    -webkit-animation-duration: 4s; 
+    animation-name: dice0back;
+    animation-duration: 0.5s;
+  }
+  .dice1_animation_back{
+    display:block;
+    position: relative;
+    -webkit-animation-name: dice1back; 
+    -webkit-animation-duration: 4s; 
+    animation-name: dice1back;
+    animation-duration: 0.5s;
+  }
+  .dice2_animation_back{
+    display:block;
+    position: relative;
+    -webkit-animation-name: dice2back; 
+    -webkit-animation-duration: 4s; 
+    animation-name: dice2back;
+    animation-duration: 0.5s;
+  }
+  .dice3_animation_back{
+    display:block;
+    position: relative;
+    -webkit-animation-name: dice0back; 
+    -webkit-animation-duration: 4s; 
+    animation-name: dice3back;
+    animation-duration: 0.5s;
+  }
+  .dice4_animation_back{
+    display:block;
+    position: relative;
+    -webkit-animation-name: dice4back; 
+    -webkit-animation-duration: 4s; 
+    animation-name: dice4back;
+    animation-duration: 0.5s;
+  }
+  @keyframes dice0back {  /*pipa*/
+    100%   {  left: 80px; top: 90px;}
+    0% { left: 50px; top: 250px;} 
+  }
+  @keyframes dice1back {  /*pipa*/
+    100%   {  left: 80px; top: 90px;}
+    0% { left: 150px; top: 270px;}
+  }
+  @keyframes dice2back {  /*pipa*/
+    100%   {  left: 80px; top: 90px;}
+    0% { left: 240px; top: 280px;}
+  }
+  @keyframes dice3back {
+    100%   {  left: 80px; top: 90px;}
+    0% { left: 260px; top: 130px;}
+  }
+  @keyframes dice4back {
+    100%   {  left: 80px; top: 90px;}
+    0% { left: 320px; top: 210px;}
+  }
+  
+}
+
+
+
+
+
+
+
+      
